@@ -15,4 +15,37 @@ canvas{
     border-radius: 10px;
     margin-top: 130px;
     box-shadow: 5px 5px 5px white;
+    animation: animate 4s linear infinite;
+}
+
+#btn{
+    font-size: 20px;
+}
+
+#input{
+    width: 25%;
+}
+
+.cursor{
+    position: fixed;
+    z-index: 999;
+    background: #003399;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 20px #003399,
+                0 0 60px #003399,
+                0 0 100px #003399;
+}
+
+.cursor::before{
+    content: '';
+    position: absolute;
+    background: #003399;
+    width: 50px;
+    height: 50px;
+    opacity: 0.2;
+    transform: translate( -50%, -30%);
+    border-radius: 50%
 }
